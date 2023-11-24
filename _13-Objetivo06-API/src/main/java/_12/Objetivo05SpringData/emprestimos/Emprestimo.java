@@ -5,11 +5,13 @@ import _12.Objetivo05SpringData.exemplares.Exemplar;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 @ToString
 
@@ -29,15 +31,5 @@ public class Emprestimo {
     @OneToOne
     private Exemplar exemplar;
 
-    public void realizarEmprestimo() {
-
-    }
-
-    public void realizarDevolucao() {
-
-    }
-    public Emprestimo() {
-
-    }
 }
 

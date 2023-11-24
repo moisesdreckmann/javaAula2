@@ -2,6 +2,8 @@ package _12.Objetivo05SpringData;
 
 import _12.Objetivo05SpringData.alunos.AlunoController;
 import _12.Objetivo05SpringData.alunos.AlunoService;
+import _12.Objetivo05SpringData.emprestimos.Emprestimo;
+import _12.Objetivo05SpringData.emprestimos.EmprestimoController;
 import _12.Objetivo05SpringData.exemplares.ExemplarController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -32,6 +34,9 @@ public class HomeController {
                 }
                 case 2 -> {
                     ExemplarController.main(null);
+                }
+                case 3 -> {
+                    EmprestimoController.main(null);
                 }
                 default -> {
                     if (opcao != 0) System.out.println("Opção inválida.");

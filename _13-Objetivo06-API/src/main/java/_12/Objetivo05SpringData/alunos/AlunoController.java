@@ -11,7 +11,7 @@ import java.util.Scanner;
 @Controller
 public class AlunoController {
 
-    private static AlunoService alunoService;
+    public static AlunoService alunoService;
 
     public AlunoController(AlunoService alunoService) {
         AlunoController.alunoService = alunoService;
