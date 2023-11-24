@@ -54,7 +54,7 @@ public class EmprestimoService {
 
         if(alunoExistente.isPresent()) {
             Aluno aluno = alunoExistente.get();
-            return emprestimoRepository.findAll();
+            return emprestimoRepository.findByCodigoDoAluno(aluno.getCodigo());
         } else {
             return Collections.emptyList();
         }
