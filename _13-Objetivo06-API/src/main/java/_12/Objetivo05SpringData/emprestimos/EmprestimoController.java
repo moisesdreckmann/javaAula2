@@ -29,7 +29,7 @@ public class EmprestimoController {
             do {
                 System.out.print(
                         """
-                                \n-------  MENU Aluno ------- \n
+                                \n-------  MENU Emprestimo ------- \n
                                  1. Realizar Emprestimo
                                  2. Buscar por Emprestimos por Aluno
                                  Opção (Zero p/sair):\s""");
@@ -84,9 +84,9 @@ public class EmprestimoController {
         } else {
             System.out.println("Empréstimos encontrados para o aluno com o código '" + codigoAluno + "':");
             for (Emprestimo emprestimo : emprestimos) {
-                System.out.println("Nome do exemplar" + emprestimo.getExemplar().getNome());
-                System.out.println("Data do emprestimo" + emprestimo.getDataEmprestimo());
-                System.out.println("Data da devolução" + emprestimo.getDataDevolucao() + "\n");
+                System.out.println("Nome do exemplar: " + emprestimo.getExemplar().getNome());
+                System.out.println("Data do emprestimo: " + emprestimo.getDataEmprestimo());
+                System.out.println("Data da devolução: " + emprestimo.getDataDevolucao() + "\n");
             }
         }
     }
