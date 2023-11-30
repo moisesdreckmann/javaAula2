@@ -49,6 +49,9 @@ public class ArtigoService {
         return artigosEncontrados;
     }
 
+    public List<Artigo> buscarTodos() {
+        return artigoRepository.findAll();
+    }
 }
 
 

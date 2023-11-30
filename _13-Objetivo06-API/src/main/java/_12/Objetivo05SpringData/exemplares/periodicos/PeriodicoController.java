@@ -1,5 +1,6 @@
 package _12.Objetivo05SpringData.exemplares.periodicos;
 
+import _12.Objetivo05SpringData.exemplares.artigos.Artigo;
 import _12.Objetivo05SpringData.exemplares.periodicos.Periodico;
 import org.springframework.stereotype.Controller;
 
@@ -24,7 +25,7 @@ public class PeriodicoController {
         System.out.println("Digite o tipo do exemplar (1.livro 2.artigo 3.periodico):");
         periodico.setTipoExemplar(scanner.nextInt());
         scanner.nextLine();
-        System.out.println("Digite a editora: ");
+        System.out.println("Digite o nome da editora: ");
         periodico.setEditora(scanner.nextLine());
 
         periodicoService.cadastrarPeriodico(periodico);
@@ -38,7 +39,7 @@ public class PeriodicoController {
         System.out.println("Digite o tipo do exemplar (1.livro 2.artigo 3.periodico):");
         periodico.setTipoExemplar(scanner.nextInt());
         scanner.nextLine();
-        System.out.println("Digite a editora: ");
+        System.out.println("Digite o nome da editora: ");
         periodico.setEditora(scanner.nextLine());
 
         System.out.println("Digite o codigo do periodico: ");
@@ -78,5 +79,10 @@ public class PeriodicoController {
                 System.out.println("\n");
             }
         }
+    }
+
+    public static void buscarTodos() {
+        List<Periodico> resultado = periodicoService.buscarTodos();
+        System.out.println(resultado);
     }
 }

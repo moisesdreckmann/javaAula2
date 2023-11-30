@@ -10,7 +10,6 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 
 @Entity
 public class Livro extends Exemplar {
@@ -20,4 +19,12 @@ public class Livro extends Exemplar {
     private String editora;
     private Integer edicao;
 
+    @Override
+    public String toString() {
+        return "\nLivro{" +
+                "autor='" + autor + '\'' +
+                ", editora='" + editora + '\'' +
+                ", edicao=" + edicao +
+                "} " + super.toString();
+    }
 }

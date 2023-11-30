@@ -31,6 +31,7 @@ public class AlunoController {
                              3. Excluir um aluno
                              4. Procurar um aluno por Id
                              5. Procurar um aluno pelo nome
+                             6. Procurar todos os alunos
                              Opção (Zero p/sair):\s""");
             opcao = scanner.nextInt();
             scanner.nextLine();
@@ -40,13 +41,13 @@ public class AlunoController {
                 case 3 -> excluir();
                 case 4 -> procurarPorId();
                 case 5 -> procurarPorNome();
+                case 6 -> procurarTodos();
                 default -> {
                     if (opcao != 0) System.out.println("Opção inválida.");
                 }
             }
         } while (opcao != 0);
     }
-
     private static void inserir() {
         Aluno aluno = new Aluno();
         System.out.println("Digite os dados de aluno \n");
@@ -64,7 +65,7 @@ public class AlunoController {
         Endereco endereco = new Endereco();
         System.out.println("Digite a rua: ");
         endereco.setRua(scanner.nextLine());
-        System.out.println("Digite o numero: ");
+        System.out.println("Digite o numero da rua: ");
         endereco.setNumero(scanner.nextInt());
         scanner.nextLine();
         System.out.println("Digite o cep: ");
@@ -77,6 +78,9 @@ public class AlunoController {
 
     private static void atualizar() {
         Aluno aluno = new Aluno();
+        System.out.println("Digite o seu codigo/id/matricula: ");
+        aluno.setCodigo((long) scanner.nextInt());
+        scanner.nextLine();
         System.out.println("Digite os dados de aluno \n");
         System.out.println("Digite o nome do aluno: ");
         aluno.setNome(scanner.nextLine());
@@ -92,15 +96,12 @@ public class AlunoController {
         Endereco endereco = new Endereco();
         System.out.println("Digite a rua: ");
         endereco.setRua(scanner.nextLine());
-        System.out.println("Digite o numero: ");
+        System.out.println("Digite o numero da rua: ");
         endereco.setNumero(scanner.nextInt());
         scanner.nextLine();
         System.out.println("Digite o cep: ");
         endereco.setCep(scanner.nextLine());
         aluno.setEndereco(endereco);
-
-        System.out.println("Digite o seu codigo/id/matricula: ");
-        aluno.setCodigo((long) scanner.nextInt());
 
         String resultado = alunoService.editarAlunoPorId(aluno.getCodigo(), aluno);
         System.out.println(resultado);
@@ -142,4 +143,10 @@ public class AlunoController {
             }
         }
     }
+
+    private static void procurarTodos() {
+        List<Aluno> resultado = alunoService.procurarTodos();
+        System.out.println(resultado);
+    }
+
 }

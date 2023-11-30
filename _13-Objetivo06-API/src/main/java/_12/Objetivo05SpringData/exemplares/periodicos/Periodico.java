@@ -10,11 +10,16 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 
 @Entity
 public class Periodico extends Exemplar {
     @Column(length = 50, nullable = false)
     private String editora;
 
+    @Override
+    public String toString() {
+        return "\nPeriodico{" +
+                "editora='" + editora + '\'' +
+                "} " + super.toString();
+    }
 }

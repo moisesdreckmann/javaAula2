@@ -1,5 +1,6 @@
 package _12.Objetivo05SpringData.exemplares.livros;
 
+import _12.Objetivo05SpringData.exemplares.artigos.Artigo;
 import _12.Objetivo05SpringData.exemplares.livros.Livro;
 import org.springframework.stereotype.Controller;
 
@@ -28,7 +29,7 @@ public class LivroController {
         livro.setAutor(scanner.nextLine());
         System.out.println("Digite a editora: ");
         livro.setEditora(scanner.nextLine());
-        System.out.println("Digite a edição: ");
+        System.out.println("Digite a edição (numero): ");
         livro.setEdicao(scanner.nextInt());
         scanner.nextLine();
         livroService.cadastrarLivro(livro);
@@ -46,7 +47,7 @@ public class LivroController {
         livro.setAutor(scanner.nextLine());
         System.out.println("Digite a editora: ");
         livro.setEditora(scanner.nextLine());
-        System.out.println("Digite a edição: ");
+        System.out.println("Digite a edição (numero): ");
         livro.setEdicao(scanner.nextInt());
 
         System.out.println("Digite o codigo do livro: ");
@@ -81,5 +82,10 @@ public class LivroController {
                 System.out.println("\n");
             }
         }
+    }
+
+    public static void buscarTodos() {
+        List<Livro> resultado = livroService.buscarTodos();
+        System.out.println(resultado);
     }
 }

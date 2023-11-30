@@ -10,11 +10,16 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 
 @Entity
 public class Artigo extends Exemplar {
     @Column(length = 50, nullable = false)
     private String autor;
 
+    @Override
+    public String toString() {
+        return "\nArtigo{" +
+                "autor='" + autor + '\'' +
+                "} " + super.toString();
+    }
 }

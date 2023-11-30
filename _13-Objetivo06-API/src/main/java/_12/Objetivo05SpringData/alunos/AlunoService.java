@@ -55,4 +55,8 @@ public class AlunoService {
         return alunosEncontrados;
     }
 
+    public List<Aluno> procurarTodos() {
+        return alunoRepository.findAll();
+    }
+
 }

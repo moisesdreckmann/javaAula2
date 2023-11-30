@@ -1,5 +1,6 @@
 package _12.Objetivo05SpringData.exemplares.periodicos;
 
+import _12.Objetivo05SpringData.exemplares.artigos.Artigo;
 import _12.Objetivo05SpringData.exemplares.periodicos.Periodico;
 import _12.Objetivo05SpringData.exemplares.periodicos.PeriodicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,4 +50,7 @@ public class PeriodicoService {
         return periodicosEncontrados;
     }
 
+    public List<Periodico> buscarTodos() {
+        return periodicoRepository.findAll();
+    }
 }

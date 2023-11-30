@@ -11,7 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Scanner;
 
-@SpringBootApplication
 public class HomeController {
 
     private static final Scanner scanner = new Scanner(System.in);

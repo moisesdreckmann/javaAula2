@@ -9,7 +9,6 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -23,4 +22,12 @@ public abstract class Exemplar {
     @Column(length = 1, nullable = false)
     private Integer tipoExemplar;
 
+    @Override
+    public String toString() {
+        return "\nExemplar{" +
+                "codigo=" + codigo +
+                ", nome='" + nome + '\'' +
+                ", tipoExemplar=" + tipoExemplar +
+                '}';
+    }
 }

@@ -10,7 +10,6 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 
 @Entity
 @Table(name = "alunos")
@@ -28,4 +27,15 @@ public class Aluno {
     @Embedded
     private Endereco endereco;
 
+    @Override
+    public String toString() {
+        return "\nAluno{" +
+                "codigo=" + codigo +
+                ", nome='" + nome + '\'' +
+                ", dataNascimento=" + dataNascimento +
+                ", telefone=" + telefone +
+                ", email='" + email + '\'' +
+                ", endereco=" + endereco +
+                '}';
+    }
 }

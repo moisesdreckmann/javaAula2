@@ -74,4 +74,9 @@ public class ArtigoController {
             }
         }
     }
+
+    public static void buscarTodos() {
+        List<Artigo> resultado = artigoService.buscarTodos();
+        System.out.println(resultado);
+    }
 }

@@ -1,5 +1,6 @@
 package _12.Objetivo05SpringData.exemplares.livros;
 
+import _12.Objetivo05SpringData.exemplares.artigos.Artigo;
 import _12.Objetivo05SpringData.exemplares.livros.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,6 +47,10 @@ public class LivroService {
     public List<Livro> getByNome(String nome) {
         List<Livro> livrosEncontrados = livroRepository.findByNome(nome);
         return livrosEncontrados;
+    }
+
+    public List<Livro> buscarTodos() {
+        return livroRepository.findAll();
     }
 
 }

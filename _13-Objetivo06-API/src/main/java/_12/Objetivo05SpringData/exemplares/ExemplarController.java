@@ -20,16 +20,19 @@ public class ExemplarController {
                             2. Editar um livro
                             3. Deletar um livro
                             4. Buscar um livro pelo nome
+                            5. Buscar Todos os Livros
                             Artigo:
-                            5. Inserir um artigo
-                            6. Editar um artigo
-                            7. Deletar um artigo
-                            8. Buscar um artigo pelo nome
+                            6. Inserir um artigo
+                            7. Editar um artigo
+                            8. Deletar um artigo
+                            9. Buscar um artigo pelo nome
+                            10. Buscar Todos os Artigos
                             Periodico:
-                            9. Inserir um periodico
-                            10. Editar um periodico
-                            11. Deletar um periodico
-                            12. Buscar um periodico pelo nome
+                            11. Inserir um periodico
+                            12. Editar um periodico
+                            13. Deletar um periodico
+                            14. Buscar um periodico pelo nome
+                            15. Buscar Todos os periodicos
                              Opção (Zero p/sair):\s""");
             opcao = scanner.nextInt();
             scanner.nextLine();
@@ -38,14 +41,17 @@ public class ExemplarController {
                 case 2 -> LivroController.editar();
                 case 3 -> LivroController.excluir();
                 case 4 -> LivroController.buscar();
-                case 5 -> ArtigoController.inserir();
-                case 6 -> ArtigoController.editar();
-                case 7 -> ArtigoController.deletar();
-                case 8 -> ArtigoController.buscar();
-                case 9 -> PeriodicoController.inserir();
-                case 10 -> PeriodicoController.editar();
-                case 11 -> PeriodicoController.deletar();
-                case 12 -> PeriodicoController.buscar();
+                case 5 -> LivroController.buscarTodos();
+                case 6 -> ArtigoController.inserir();
+                case 7 -> ArtigoController.editar();
+                case 8 -> ArtigoController.deletar();
+                case 9 -> ArtigoController.buscar();
+                case 10 -> ArtigoController.buscarTodos();
+                case 11 -> PeriodicoController.inserir();
+                case 12 -> PeriodicoController.editar();
+                case 13 -> PeriodicoController.deletar();
+                case 14 -> PeriodicoController.buscar();
+                case 15 -> PeriodicoController.buscarTodos();
                 default -> {
                     if (opcao != 0) System.out.println("Opção inválida.");
                 }
