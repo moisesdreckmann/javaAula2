@@ -14,3 +14,6 @@ empréstimos e exemplares. A tecnologia da implementação é java com spring bo
 * Diagrama de Implantação   
 
 <img width="525" alt="Screenshot_4" src="https://github.com/moisesdreckmann/javaAula2/assets/95986307/2762e706-06a7-4d7e-8716-5f2d782ad885">      
+
+
+Obs.: Video demonstrativo pode ser encontrado nos arquivos. 
