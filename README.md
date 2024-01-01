@@ -1,10 +1,11 @@
 Sistema de gerenciamento de biblioteca     
+
 Um sistema de gerenciamento de bibliotecas escolares e institucionais é um sistema de software   
 que automatiza as tarefas de gerenciamento de uma biblioteca. Ele inclui recursos para o cadastro   
 de usuários, empréstimo de exemplares, devolução de exemplares e listagens (pesquisa) de alunos,   
 empréstimos e exemplares. A tecnologia da implementação é java com spring boot como framework.   
 
-*Diagrama Casos de Uso   
+* Diagrama Casos de Uso   
 
 <img width="494" alt="Screenshot_2" src="https://github.com/moisesdreckmann/javaAula2/assets/95986307/862b00b7-5fb0-457d-a738-087cfacca8ac">   
 
